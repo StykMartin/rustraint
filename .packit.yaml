@@ -13,15 +13,18 @@ jobs:
   - job: copr_build
     trigger: pull_request
     targets:
-      - fedora-rawhide-x86_64
-      - fedora-rawhide-aarch64
-      - fedora-latest-x86_64
+      - fedora-all-x86_64
+      - fedora-all-aarch64
+      - fedora-all-ppc64le
+      - fedora-all-s390x
   - job: copr_build
     trigger: commit
     branch: master
     targets:
-      - fedora-rawhide-x86_64
-      - fedora-latest-x86_64
+      - fedora-all-x86_64
+      - fedora-all-aarch64
+      - fedora-all-ppc64le
+      - fedora-all-s390x
 
 notifications:
   pull_request:
