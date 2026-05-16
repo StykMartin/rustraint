@@ -1,0 +1,28 @@
+specfile_path: rustraint.spec
+upstream_package_name: rustraint
+downstream_package_name: rustraint
+
+actions:
+  get-current-version:
+    - bash -c "awk -F'\"' '/^version *=/ {gsub(/[ \t]/,\"\"); print $2; exit}' Cargo.toml"
+  create-archive:
+    - bash -c "git archive --prefix=rustraint-${PACKIT_PROJECT_VERSION}/ -o rustraint-${PACKIT_PROJECT_VERSION}.tar.gz HEAD"
+    - bash -c "echo rustraint-${PACKIT_PROJECT_VERSION}.tar.gz"
+
+jobs:
+  - job: copr_build
+    trigger: pull_request
+    targets:
+      - fedora-rawhide-x86_64
+      - fedora-rawhide-aarch64
+      - fedora-latest-x86_64
+  - job: copr_build
+    trigger: commit
+    branch: master
+    targets:
+      - fedora-rawhide-x86_64
+      - fedora-latest-x86_64
+
+notifications:
+  pull_request:
+    successful_build: false
