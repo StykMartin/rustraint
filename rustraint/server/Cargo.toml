@@ -1,5 +1,6 @@
 [package]
 name = "rustraintd"
+description = "Executes test harness jobs and reports task results"
 version.workspace = true
 edition.workspace = true
 license.workspace = true
