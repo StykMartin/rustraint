@@ -1,3 +1,11 @@
 [workspace]
 members = ["rustraint/client", "rustraint/server"]
 resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+repository = "https://github.com/StykMartin/rustraint"
+homepage = "https://github.com/StykMartin/rustraint"
+rust-version = "1.74"
+license = "GPL-3.0-or-later"
