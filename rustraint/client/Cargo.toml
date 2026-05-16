@@ -12,6 +12,6 @@ name = "rustraint"
 path = "src/client.rs"
 
 [dependencies]
-clap = { version = "4.6.1", features = ["derive"] }
-quick-xml = { version = "0.40.1", features = ["serialize"] }
+clap = { version = "4.6.0", features = ["derive"] }
+quick-xml = { version = "0.39.2", features = ["serialize"] }
 serde = { version = "1", features = ["derive"] }
