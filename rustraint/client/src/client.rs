@@ -2,6 +2,9 @@ use std::path::PathBuf;
 
 use clap::{ArgAction, Parser};
 
+mod job;
+mod template;
+
 /// Test harness that runs tasks according to a job and collects their results. Can be used standalone or with Beaker.
 #[derive(Parser, Debug)]
 #[command(version, long_about = None)]
