@@ -13,5 +13,5 @@ path = "src/client.rs"
 
 [dependencies]
 clap = { version = "4.6.0", features = ["derive"] }
-quick-xml = { version = "0.39.2", features = ["serialize"] }
+quick-xml = { version = "0.42.0", features = ["serialize"] }
 serde = { version = "1", features = ["derive"] }
